@@ -1,0 +1,55 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+ 
+
+<html>
+<head>
+
+ 
+<title>欢迎来到学生管理系统</title>
+<meta http-equiv="keywords" content="学生,管理,系统">  
+<meta http-equiv="description" content="赵哲淇课程设计">   
+
+</head>
+<script>
+function goto(){
+alert("登陆成功")
+window.location.href="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\Final\about.html";
+}
+</script
+<body>
+<a href="http://www.zust.edu.cn/">
+<img border="0" src="1.jpg" /></a>
+<div align="center"> <font size="+2" color="#FF6633">用户登录</font>
+</div>
+<form id="form1" name="form1" method="post" onblur="checkname()" action="loginServlet" >
+<table width="357" border="0" align="center">
+<tr>
+<td width="128">用户名：</td>
+<td width="219">
+<input name="user" type="text" id="user" />
+</td>
+</tr>
+<tr>
+<td>密　码：</td>
+<td>
+<input name="pwd" type="password" id="pwd" />
+</td>
+</tr>
+<tr>
+<td><label>
+<input type="submit" name="Submit" value="登录" onclick="goto()"/>
+</label></td>
+<td><label><a href="addUser.html">用户注册</a></label></td>
+</tr>
+</table>
+<p> </p>
+</form>
+
+</body>
+</html>
+
+
